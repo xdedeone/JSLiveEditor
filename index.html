@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>JSLiveEditor - Online code editor for HTML, CSS and JavaScript</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/8284a1ba3f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <label><i class="fa-brands fa-html5"></i> HTML</label>
+            <textarea id="html-code" onkeyup="compileCode()" oninput="syntaxHighlight(this)"></textarea>
+            <pre id="html-highlight" aria-hidden="true"></pre>
+            <label><i class="fa-brands fa-css3"></i> CSS</label>
+            <textarea id="css-code" onkeyup="compileCode()" oninput="syntaxHighlight(this)"></textarea>
+
+            <label><i class="fa-brands fa-js"></i> JavaScript</label>
+            <textarea id="js-code" onkeyup="compileCode()" oninput="syntaxHighlight(this)"></textarea>
+        </div>
+        <div class="right">
+            <label><i class="fa-solid fa-code"></i> Code Output</label>
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
